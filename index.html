@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>被你发现辣(๑•́ ₃•̀๑)</title>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="dist/jquery.vidbacking.min.css" type="text/css">
+<script src="dist/jquery.vidbacking.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js" type="text/javascript"></script>
+<style>
+button.aplayer-icon-lrc {display:none !important;}
+.htmleaf-demo {width: 100%;padding-bottom: 1.2em;}
+.htmleaf-demo a{color: #fff;text-decoration: none;}
+.htmleaf-demo a{display: inline-block;margin: 0.5em;padding: 0.6em 1em;border: 3px solid #fff;font-weight: 700;}
+.htmleaf-demo a:hover{opacity: 0.6;background:#1d7db1;}
+h1,body,html{padding: 0;margin: 0;}
+body{font-family: Arial,"Microsoft YaHei","Hiragino Sans GB",sans-serif;}
+html,body{height: 100%;overflow: hidden;box-shadow: inset 0px 0px 300px black;}
+h1{font-size: 6em;font-weight: normal;}
+#container{height: 100%;position: relative;}
+.intro{position: absolute;top: 50%;width: 100%;-webkit-transform: translateY(-50%);transform: translateY(-50%);text-align: center;}
+#section0{background-size: cover;background-position: 50% 50%;color: #fff;text-shadow: 2px 2px 4px #000;}
+#section0 p{margin:0.5em 0 2em 0;color: #F1FF00;font-size: 18px;}
+#section0 .title{-webkit-transform: translateX(-100%);transform: translateX(-100%);-webkit-animation: sectitle0 1s ease-in-out 100ms forwards;animation: sectitle0 1s ease-in-out 100ms forwards;}
+#section0 p{-webkit-transform: translateX(100%);transform: translateX(100%);-webkit-animation: sec0 1s ease-in-out 100ms forwards;animation: sec0 1s ease-in-out 100ms forwards;}
+@-webkit-keyframes sectitle0{0%{-webkit-transform: translateX(-100%);transform: translateX(-100%);}100%{-webkit-transform: translateX(0);transform: translateX(0);}}
+@keyframes sectitle0{0%{-webkit-transform: translateX(-100%);transform: translateX(-100%);}100%{-webkit-transform: translateX(0);transform: translateX(0);}}
+@-webkit-keyframes sec0{0%{-webkit-transform: translateX(100%);transform: translateX(100%);}100%{-webkit-transform: translateX(0);transform: translateX(0);}}
+@keyframes sec0{0%{-webkit-transform: translateX(100%);transform: translateX(100%);}100%{-webkit-transform: translateX(0);transform: translateX(0);}}
+</style>
+</head>
+<body>
+<video poster="assets/goutou.gif" autoplay muted loop class="vidbacking">
+		<source src="assets/hailan.mp4" type="video/mp4">
+</video>
+<div id="container">
+	<div class="section active" id="section0">
+		<div class="intro">
+			<h1 class="title">悄悄告诉你</h1>
+			<p>———你必将找到你所寻找的，祝你好运。———</p>
+			<div class="htmleaf-demo">友情链接：<a href="http://sc.chinaz.com/">魔法论坛</a></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$('body').vidbacking({
+			'masked': true
+		});
+	});
+</script>
+<div id="player" class="aplayer"></div>
+<script>
+const ap = new APlayer({
+    element: document.getElementById('player'),
+    autoplay: true,
+    mutex: true,
+    fixed: true,
+    audio: [{
+        name: 'Dancin (Krono Remix)',
+        artist: 'Krono',
+        url: 'assets/dancin.mp3',
+        cover: 'assets/dancin.jpg',
+        theme: '#ebd0c2'
+    }]
+});
+</script>
+</body>
+</html>
